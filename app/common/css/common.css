@@ -17,13 +17,15 @@ body.my-login-page {
 	box-shadow: 0 0 40px rgba(0,0,0,.05);
 }
 
-.my-login-page .brand img {
+.my-login-page div img {
 	width: 100%;
 }
 
 .my-login-page .card-wrapper {
 	width: 400px;
 	margin: 0 auto;
+	position: fixed;
+    top: 10%;
 }
 
 .my-login-page .card {
