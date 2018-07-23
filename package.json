@@ -1,0 +1,23 @@
+{
+  "name": "dev-bootcamp-project",
+  "version": "1.0.0",
+  "description": "Projeto DEV Bootcamp 2018",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnnyrtrentin/DEV-BootCamp-project.git"
+  },
+  "author": "Johnny & Fabio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnyrtrentin/DEV-BootCamp-project/issues"
+  },
+  "homepage": "https://github.com/johnnyrtrentin/DEV-BootCamp-project#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1"
+  }
+}
