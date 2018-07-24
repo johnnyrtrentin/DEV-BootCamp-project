@@ -1,4 +1,9 @@
-.welcome-page {
-    position: fixed;
-    top: 20%;
+.card-subtitle {
+    position: relative;
+    width:100%;
+    margin-bottom: 5%
+}
+
+#options {
+    margin-top: 20px;
 }
