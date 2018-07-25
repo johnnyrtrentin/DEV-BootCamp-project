@@ -2,14 +2,10 @@
   "name": "dev-bootcamp-project",
   "version": "1.0.0",
   "description": "Projeto DEV Bootcamp 2018",
-  "main": "server.js",
+  "main": "app/server.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> 23cc04c4cdc5c2e3537c4899b91332ff26eb9a12
+    "dev": "nodemon --watch app/server.js localhost 3000"
   },
   "repository": {
     "type": "git",
@@ -22,10 +18,14 @@
   },
   "homepage": "https://github.com/johnnyrtrentin/DEV-BootCamp-project#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
     "mongodb": "^3.1.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "router": "^1.3.3"
   }
 }
