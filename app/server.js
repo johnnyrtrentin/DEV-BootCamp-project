@@ -9,9 +9,10 @@ var register = require('./register-page/register.js');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-
 var clients = {};
 
+
+//EXPRESS
 app.use(express.static('public'));
 app.use(express.static('app'));
 app.use(express.static('node_modules'));
@@ -39,14 +40,31 @@ app.post('/register', function (req, res) {
     console.log(email + " " + password)
 
     res.redirect('/home-page/home.html')
-
 })
 
-// app.get ('/', function (req,req) {
-//     res.send('server is running');
-// });
+app.get ('/', function (req,req) {
+    res.send('server is running');
+});
 
-//socket
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/welcome-page/welcome.html')
+});
+
+app.get('/chat-page', function (req, res) {
+    res.sendFile(__dirname + '/chat-page/chat.html')
+});
+
+app.get('/app', function (req,res) {
+    res.sendDate(__dirname + '/app/client.js')
+})
+
+app.get('/register-page', function (req, res) {
+    res.sendFile(__dirname + '/register-page/register.html')
+});
+
+//SOCKET
 io.on("connection", function (client) {
     console.log('Usuário connectado.');
 });
@@ -71,37 +89,8 @@ io.on("connection", function (client) {
     });
 });
 
-// http.listen (3000,function () {
-//     console.log('online na 3000');
-// }
-
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/welcome-page/welcome.html')
-});
-
-app.get('/chat-page', function (req, res) {
-    res.sendFile(__dirname + '/chat-page/chat.html')
-});
-
-// app.get('/node_modules', function (req, res) {
-//     res.sendFile(__dirname + '/node_modules/socket.io-client/dist/socket.io.js')
-// })
-
-app.get('/app', function (req,res) {
-    res.sendDate(__dirname + '/app/client.js')
-})
-app.get('/welcome-page/*', function (req, res) {
-    switch (req.url) {
-        case '/welcome-page/welcome.css':
-            res.sendFile(__dirname + '/welcome-page/welcome.css')
-            break;
-    }
-});
-
-app.get('/register-page', function (req, res) {
-    res.sendFile(__dirname + '/register-page/register.html')
+http.listen (3000,function () {
+    console.log('online na 3000');
 });
 
 app.post('/register', function(req, res){
@@ -113,13 +102,12 @@ app.post('/register', function(req, res){
    //res.render('chat', {username: username})
 
    res.redirect('/home-page/home.html')
-  
   })
 
 app.get('/login-page', function (req, res) {
     res.sendFile(__dirname + '/login-page/login.html')
 });
 
-app.listen(3000, function () {
-    console.log('ONLINE!');
-});
+// app.listen(3000, function () {
+//     console.log('ONLINE!');
+// });
