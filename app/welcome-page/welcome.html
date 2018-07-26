@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="author" content="Kodinger">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="google-signin-client_id" content="710731900701-k2anq02bkq97j5ievo8pjhe41kbiam66.apps.googleusercontent.com.apps.googleusercontent.com">
+    <!--<meta name="google-signin-client_id" content="710731900701-k2anq02bkq97j5ievo8pjhe41kbiam66.apps.googleusercontent.com.apps.googleusercontent.com"> -->
     <title>AnomChat</title>
-    <link rel="stylesheet" type="text/css" href="../public/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../public/css/standard.css">
-    <link rel="stylesheet" type="text/css" href="welcome.css">
+    <!--<link rel="stylesheet"  href="/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/css/standard.css">
+    <link rel="stylesheet"  href="/css/welcome.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
             <div class="row justify-content-md-center h-100">
                 <div class="card-wrapper welcome-page">
                     <div>
-                        <img src="../public/img/logo.jpg">
+                        <img src="/img/logo.jpg">
                     </div>
                     <div class="card fat">
                         <div class="card-body">
@@ -27,11 +28,14 @@
                                 The easiest place to talk, negotiate and plan what you want and who you prefer
                             </p>
                             <div class="form-group no-margin">
-                                <a role="button" class="btn btn-outline-primary btn-block" href="../login-page/login.html">
+                                <a role="button" class="btn btn-outline-primary btn-block" href="/login-page/login.html">
                                     Already Registered
                                 </a>
-                                <a role="button" class="btn btn-outline-success btn-block" href="../register-page/register.html">
+                                <a role="button" class="btn btn-outline-success btn-block" href="/register-page/register.html">
                                     Register Now
+                                </a>
+                                <a  role="button" class="btn btn-outline-success btn-block" href="/chat-page">
+                                    CHAT!
                                 </a>
                             </div>
                             <div class="margin-top20 text-center">
@@ -48,11 +52,10 @@
         </div>
     </section>
 
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- <script src="welcome.js" async defer></script> -->
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="welcome.js" async defer></script> -->
     <script src="/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
 </body>
 </html>
